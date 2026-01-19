@@ -30,12 +30,30 @@ Birden fazla komutu tek alias’ta kullanmak için ! işareti kullanılır.
 git config --global alias.ac '!git add -A && git commit'
 git ac -m "commit mesajı"
 
-----git add . ve git add -A Farkı
 
-git add .
-→ Bulunduğun klasörden aşağısındaki değişiklikleri ekler.
+Alias ≠ Git komutu
+git st
+👉 Bu Git’in komutu değil
+👉 Senin tanımladığın bir kısayol
+Başka bilgisayarda çalışmaz.
 
-git add -A
-→ Projedeki tüm değişiklikleri stage alanına ekler.
+
+git add . ve git add -A Farkı
+
+ git add .
+- Bulunduğun klasör ve **bu klasörün içindeki (alt klasörler dahil)** dosyaları stage alanına ekler.
+- bir üst klasördeki değişiklikleri **almaz**.
+
+📌 Yani:
+> “Şu an olduğum klasörden aşağıya bak”
+
+---
+ git add -A
+- Projedeki **tüm değişiklikleri** stage alanına ekler.
+- Dosya ekleme, silme ve güncelleme fark etmez.
+- Hangi klasörde olduğun önemli değildir.
+
+📌 Yani:
+> “Projede ne değiştiyse hepsini ekle”
 
 
